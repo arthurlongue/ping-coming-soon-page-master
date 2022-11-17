@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "libre Franklin", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 25%;
+  text-align: center;
+}
+.header h1 {
+  font-size: 1.7em;
+  color: hsl(209deg, 33%, 12%);
+}
+.header h1::after {
+  content: ".";
+  color: hsl(223deg, 87%, 63%);
+}
+.header h2 {
+  font-size: 2.5em;
+  font-weight: 300;
+  color: hsl(0deg, 0%, 59%);
+}
+.header p {
+  font-size: 19px;
+  color: hsl(209deg, 33%, 12%);
+}
+.header strong {
+  color: hsl(209deg, 33%, 12%);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 4fr 1fr;
+  align-items: center;
+}
+
+input {
+  all: unset;
+  width: 350px;
+  padding: 15px;
+  border: hsl(0deg, 0%, 59%) solid 1px;
+  border-radius: 30px;
+  margin-right: 15px;
+}
+
+button {
+  all: unset;
+  background-color: hsl(223deg, 87%, 63%);
+  padding: 16px 50px;
+  border-radius: 40px;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+small {
+  margin-left: 5%;
+  color: hsl(354deg, 100%, 66%);
+  display: none;
+}
+
+.main-img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 7%;
+  color: hsl(0deg, 0%, 59%);
+}
+footer .logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 40%;
+}
+footer .logos img {
+  width: 20px;
+  color: hsl(223deg, 87%, 63%);
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    font-size: 0.9em;
+    gap: 7%;
+    margin: 0 auto;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  form input {
+    margin: 0 20px;
+    margin-bottom: 3%;
+  }
+  form button {
+    order: 3;
+    width: 68%;
+    margin: 0 20px;
+  }
+  small {
+    justify-content: center;
+    margin-left: 0;
+    margin-bottom: 5%;
+  }
+  .main-img {
+    padding: 0 5%;
+  }
+}
